@@ -25,7 +25,7 @@ To complete this lab you need to;
 
 After successfully logging in, you will find yourself on the ODA home page.
 
-### Clone Copies of the Starter Skill and Digital Assistant###
+### Clone Copies of the Starter Skill and Digital Assistant ###
 In this lab, a starter skill and a starter digital assistant are provided for you. Before you get to work, you need to create your own copies.
 
 #### Clone the Starter Skill ####
@@ -38,3 +38,14 @@ In this lab, a starter skill and a starter digital assistant are provided for yo
 6. In the **Create Clone** dialog, enter a value for **Display Name** using the form *<your_initials>_PizzaSkill*.
 For example, if your initials are AB, you'd name the skill **AB_PizzaSkill**.
 7. On the Skills dashboard page, select *<your_initials>_PizzaSkill* to open it up in the designer.
+
+#### Clone the Digital Assistant ####
+1. Click ![](images/1-hamburger-menu.png) to open the side menu.
+2. Click **Development** and select **Digital Assistants**.
+3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
+4. In the skills dashboard, find the tile for **ODA_CTD2019**, open its Options menu ![](images/2-options-menu.png), and select **Clone**.
+5. In the **Create Clone dialog**, enter a value for **Display Name** using the form <your_initials>_ODA_HOL2019.
+For example, if your initials are AB, you'd name the skill **AB_CTD_HOL2019**.
+
+6. Click **Clone**.
+7. On the Digital Assistants dashboard page, select _<your_initials>_ODA_HOL2019_ to open it up in the designer.
