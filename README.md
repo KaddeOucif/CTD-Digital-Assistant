@@ -19,7 +19,11 @@ To complete this lab you need to;
      </details>
  
 ## Get on crackin'! ##
-### Clone the skill ###
+### Login to the shared instance ###
+1. In your browser, navigate to http://bit.ly/DAOOW2019.
+2. Log in to the instance using the credentials provided by your lab instructor.
+
+After successfully logging in, you will land on the ODA home page.
 
 1. With the Oracle Digital Assistant UI open in your browser, click ![](images/1-hamburger-menu.png) main menu icon to open the side menu.
 2. Click **Development** and select **Skills**.
