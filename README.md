@@ -1,4 +1,4 @@
-![](../../common/images/customer.logo2.png)
+![](../../common/images/0-ctd-banner.png)
 ## Digital Assistant - Building a Digital Assistant for your business ##
 
 In this lab, you'll learn how to work with skills and digital assistants in Oracle Digital Assistant;
