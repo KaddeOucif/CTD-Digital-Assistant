@@ -12,7 +12,7 @@ To complete this lab you need to;
 - Download these files
   - [PizzaSkill_starter.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_starter.zip?raw=true)
   - [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true)
-  - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_HOL2019.zip?raw=true)
+  - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_CTD2019.zip?raw=true)
   - <details><summary> <b>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine</b> </summary>      <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
      <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
      <img src="/images/0.1-oda-sample-download.png">
@@ -49,3 +49,5 @@ For example, if your initials are AB, you'd name the skill **AB_CTD_HOL2019**.
 
 6. Click **Clone**.
 7. On the Digital Assistants dashboard page, select _<your_initials>_ODA_HOL2019_ to open it up in the designer.
+
+### 1. Design your Pizza Skill ###
