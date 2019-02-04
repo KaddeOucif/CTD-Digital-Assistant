@@ -23,13 +23,18 @@ To complete this lab you need to;
 1. In your browser, navigate to http://bit.ly/DAOOW2019.
 2. Log in to the instance using the credentials provided by your lab instructor.
 
-After successfully logging in, you will land on the ODA home page.
+After successfully logging in, you will find yourself on the ODA home page.
 
+### Clone Copies of the Starter Skill and Digital Assistant###
+In this lab, a starter skill and a starter digital assistant are provided for you. Before you get to work, you need to create your own copies.
+
+#### Clone the Starter Skill ####
 1. With the Oracle Digital Assistant UI open in your browser, click ![](images/1-hamburger-menu.png) main menu icon to open the side menu.
 2. Click **Development** and select **Skills**.
 3. Click ![](images/1-hamburger-menu.png) again to collapse side menu.
 4. In the skills dashboard, find the tile for **PizzaSkill**.
 5. Click PizzaSkill's **Options** menu (![](images/2-options-menu.png)) and select **Clone**.
+![](images/3-clone-skill.png)
 6. In the **Create Clone** dialog, enter a value for **Display Name** using the form *<your_initials>_PizzaSkill*.
 For example, if your initials are AB, you'd name the skill **AB_PizzaSkill**.
 7. On the Skills dashboard page, select *<your_initials>_PizzaSkill* to open it up in the designer.
