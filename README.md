@@ -13,8 +13,19 @@ To complete this lab you need to;
   - [PizzaSkill_starter.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_starter.zip?raw=true)
   - [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true)
   - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_HOL2019.zip?raw=true)
-  - <details><summary>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine </summary>      <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
+  - <details><summary> <b>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine</b> </summary>      <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
      <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
      <img src="/images/0.1-oda-sample-download.png">
      </details>
-  
+ 
+## Get on crackin'! ##
+### Clone the skill ###
+
+1. With the Oracle Digital Assistant UI open in your browser, click ![](images/1-hamburger-menu.png) main menu icon to open the side menu.
+2. Click **Development** and select **Skills**.
+3. Click ![](images/1-hamburger-menu.png) again to collapse side menu.
+4. In the skills dashboard, find the tile for **PizzaSkill**.
+5. Click PizzaSkill's **Options** menu (![](images/2-options-menu.png)) and select **Clone**.
+6. In the **Create Clone** dialog, enter a value for **Display Name** using the form *<your_initials>_PizzaSkill*.
+For example, if your initials are AB, you'd name the skill **AB_PizzaSkill**.
+7. On the Skills dashboard page, select *<your_initials>_PizzaSkill* to open it up in the designer.
