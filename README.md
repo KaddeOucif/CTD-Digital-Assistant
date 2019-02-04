@@ -15,5 +15,6 @@ To complete this lab you need to;
   - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_HOL2019.zip?raw=true)
   - <details><summary>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine </summary>      <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
      <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
+     <img src="/images/0.1-oda-sample-download">
      </details>
   
