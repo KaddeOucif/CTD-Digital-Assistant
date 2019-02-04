@@ -7,10 +7,13 @@ In this lab, you'll learn how to work with skills and digital assistants in Orac
 
 ## Before you start ##
 
-To complete this lab you need these files;
+To complete this lab you need to;
 
-- These files
+- Download these files
   - [PizzaSkill_starter.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_starter.zip?raw=true)
   - [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true)
   - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_HOL2019.zip?raw=true)
+  - <details><summary>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine </summary>      <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
+     <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
+     </details>
   
