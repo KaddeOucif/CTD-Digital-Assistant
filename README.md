@@ -93,6 +93,9 @@ For now it's just a static response. It will become more dynamic once we add log
 5. Again, click ![](images/10-add-prompt.png).
 6. For the value, enter ```Please choose small, medium or large.```
 7. Click **Close**.
+
+---
+
 8. Again, click ![](images/10-add-prompt.png).
 9. Click **Close**.
 10. On the Add Bag Item page, fill in the following values:
@@ -103,6 +106,9 @@ For now it's just a static response. It will become more dynamic once we add log
 - **Prompt for Disambiguation:** _switched ON_
 - **Disambiguation Prompt:** ```Sorry you can only order one topping type```
 11. Click **Close**.
+
+---
+
 12. Again click ![](images/9-bag-item-button.png).
 13. On the Add Bag Item page, fill in the following values:
 - **Name:** PizzaDough
@@ -111,6 +117,9 @@ For now it's just a static response. It will become more dynamic once we add log
 - **Out of Order Extraction:** _switched ON_
 - **Prompt for Value:** false
 14. Click Close.
+
+---
+
 15. For the fourth (and final) time, click ![](images/9-bag-item-button.png).
 16. On the Add Bag Item page, fill in the following values:
 - **Name:** DeliveryTime
