@@ -1,5 +1,5 @@
 ![](images/0-ctd-banner.png)
-## Digital Assistant - Building a Digital Assistant for your business ##
+# Digital Assistant - Building a Digital Assistant for your business #
 
 In this lab, you'll learn how to work with skills and digital assistants in Oracle Digital Assistant;
 -	A **skill** is an individual chatbot that is focused on a specific set of capabilities (e.g. helping customers order food from a specific restaurant).
@@ -27,7 +27,7 @@ To complete this lab you need to;
 
 After successfully logging in, you will find yourself on the ODA home page.
 
-### Clone Copies of the Starter Skill and Digital Assistant ###
+### 1. Clone Copies of the Starter Skill and Digital Assistant ###
 In this lab, a starter skill and a starter digital assistant are provided for you. Before you get to work, you need to create your own copies.
 
 #### Clone the Starter Skill ####
@@ -52,7 +52,7 @@ For example, if your initials are AB, you'd name the skill **AB_CTD_2019**.
 6. Click **Clone**.
 7. On the Digital Assistants dashboard page, select _<your_initials>_ODA_HOL2019_ to open it up in the designer.
 
-###### 1. Design your Pizza Skill ######
+### 2. Design your Pizza Skill ###
 1. In ODA, click ![](images/1-hamburger-menu.png) to open the side menu.
 2. Click **Development** and select **Skills**.
 3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
