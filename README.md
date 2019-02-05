@@ -13,9 +13,11 @@ To complete this lab you need to;
   - [PizzaSkill_starter.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_starter.zip?raw=true)
   - [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true)
   - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_CTD2019.zip?raw=true)
-  - <details><summary> <b>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine</b> </summary>      <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
-     <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
-     <img src="/images/0.1-oda-sample-download.png">
+  - <details><summary> <b>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine</b> </summary>
+     <b>1.</b> <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
+     <b>2.</b> <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
+     <i>Navigate to <b>ODA Client samples for JavaScript v18.4.3.0</b> and download the <b>bots-client-sdk-js-samples-18.4.3.zip</b> file.</i><br>
+     <img src="/images/0.1-oda-sample-download.png"></img>
      </details>
  
 ## Get on crackin'! ##
@@ -44,10 +46,26 @@ For example, if your initials are AB, you'd name the skill **AB_PizzaSkill**.
 2. Click **Development** and select **Digital Assistants**.
 3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
 4. In the skills dashboard, find the tile for **ODA_CTD2019**, open its Options menu ![](images/2-options-menu.png), and select **Clone**.
-5. In the **Create Clone dialog**, enter a value for **Display Name** using the form <your_initials>_ODA_HOL2019.
-For example, if your initials are AB, you'd name the skill **AB_CTD_HOL2019**.
+5. In the **Create Clone dialog**, enter a value for **Display Name** using the form <your_initials>_CTD_2019.
+For example, if your initials are AB, you'd name the skill **AB_CTD_2019**.
 
 6. Click **Clone**.
 7. On the Digital Assistants dashboard page, select _<your_initials>_ODA_HOL2019_ to open it up in the designer.
 
-### 1. Design your Pizza Skill ###
+###### 1. Design your Pizza Skill ######
+1. In ODA, click ![](images/1-hamburger-menu.png) to open the side menu.
+2. Click **Development** and select **Skills**.
+3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
+4. In the skills dashboard, select your copy of **PizzaSkill**.
+5. In the left navigation for the designer, select the ![](images/4-left_nav_intents.png).
+6. Click the **OrderPizza** intent and quickly scan the utterances.
+7. In the left navigation for the designer, select ![](images/5-left_nav_entities.png).
+8. Select the **PizzaDough** entity and look at the way that it is configured.
+9. Repeat the above step for **PizzaSize** and **PizzaTopping**.
+10. Locate the **Train button** ![](images/6-train-button.png) on the right side of the page, click it, click **Submit**, and then wait a few seconds for the training to complete.
+11. Find the Skill Tester ![](images/7-test-button.png) in the bottom of the skill's left navigation bar and click it.
+12. In the tester's **Message** field, type *I want to order pizza*, click **Send**, and note the skill's response.
+For now it's just a static response. It will become more dynamic once we add logic to the dialog flow.
+
+13. Click the **Reset** button at the top of the tester window and then close the tester.
+
