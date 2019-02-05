@@ -53,6 +53,9 @@ For example, if your initials are AB, you'd name the skill **AB_CTD_2019**.
 7. On the Digital Assistants dashboard page, select _<your_initials>_ODA_HOL2019_ to open it up in the designer.
 
 ### 2. Design your Pizza Skill ###
+< Describe what we're doing this lab>
+
+#### Explore the Corpus and test the Skill ####
 1. In ODA, click ![](images/1-hamburger-menu.png) to open the side menu.
 2. Click **Development** and select **Skills**.
 3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
@@ -69,3 +72,56 @@ For now it's just a static response. It will become more dynamic once we add log
 
 13. Click the **Reset** button at the top of the tester window and then close the tester.
 
+#### Create your Composite Bag and associate the right entities ####
+
+1. Select ![](images/5-left-nav-entities.png) and click ![](images/8-add-entity.png) to create a new entity.
+2. In the **Name** field, change the value to _PizzaBag_.
+3. In the Configuration section, in the Type dropdown, select **Composite Bag**.
+![](images/21-select-composite-bag.png)
+
+#### Add the right entity items to your bag ####
+
+1. Click ![](images/9-bag-item-button.png).
+2. On the Add Bag Item page, fill in the following values:
+- **Name:** PizzaSize
+- **Type:** Entity
+- **Entity Name:** PizzaSize (If prompted in a popup, select Overwrite.)
+- **Maximum User Input Attempts:** 4
+- **Error Message:** ```Sorry, '${system.entityToResolve.value.userInput!'this'}' is not a valid size of pizza.```
+3. Click ![](images/10-add-prompt.png).
+4. For the value, enter ```What size of pizza would you like?```
+5. Again, click ![](images/10-add-prompt.png).
+6. For the value, enter ```Please choose small, medium or large.```
+7. Click **Close**.
+8. Again, click ![](images/10-add-prompt.png).
+9. Click **Close**.
+10. On the Add Bag Item page, fill in the following values:
+- **Name:** PizzaTopping
+- **Type**: Entity
+- **Entity Name:** PizzaTopping (If prompted in a popup, select **Overwrite**.)
+- **Error Message:** Sorry, we don't have that topping
+- **Prompt for Disambiguation:** _switched ON_
+- **Disambiguation Prompt:** ```Sorry you can only order one topping type```
+11. Click **Close**.
+12. Again click ![](images/9-bag-item-button.png).
+13. On the Add Bag Item page, fill in the following values:
+- **Name:** PizzaDough
+- **Type:** Entity
+- **Entity Name:** PizzaDough
+- **Out of Order Extraction:** _switched ON_
+- **Prompt for Value:** false
+14. Click Close.
+15. For the fourth (and final) time, click ![](images/9-bag-item-button.png).
+16. On the Add Bag Item page, fill in the following values:
+- **Name:** DeliveryTime
+- **Type:** Entity
+- **Entity Name:** TIME
+- **Maximum User Input Attempts:** 4
+17. Scroll down to the Prompts section, replace the existing prompt with ```When can we deliver that for you?```, and press Enter.
+18. Click ![](images/11-validation-rule-button.png).
+19. In the **Expression** field, enter ```${(pizza.value.DeliveryTime.hrs?number < 10)?then('true','false')}```
+20. In the **Error Message** field, enter ```Sorry, we only deliver up to 9:30pm``` and press the Enter key.
+21. Click Close.
+
+Here is what the PizzaBag composite bag should look like in the designer:
+![](images/12-pizza-bag-entity.png)
