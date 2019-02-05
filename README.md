@@ -26,7 +26,7 @@ To complete this lab you need to;
 2. Log in to the instance using the credentials provided by your lab instructor.
 
 After successfully logging in, you will find yourself on the ODA home page.
-
+ 
 ### 1. Clone Copies of the Starter Skill and Digital Assistant ###
 In this lab, a starter skill and a starter digital assistant are provided for you. Before you get to work, you need to create your own copies.
 
