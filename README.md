@@ -128,9 +128,18 @@ For now it's just a static response. It will become more dynamic once we add log
 - **Maximum User Input Attempts:** 4
 17. Scroll down to the Prompts section, replace the existing prompt with ```When can we deliver that for you?```, and press Enter.
 18. Click ![](images/11-validation-rule-button.png).
-19. In the **Expression** field, enter ```${(pizza.value.DeliveryTime.hrs?number < 10)?then('true','false')}```
+19. In the **Expression** field, enter ```${(pizza.value.DeliveryTime.hrs?number < 10)?then('true','false')}```.
 20. In the **Error Message** field, enter ```Sorry, we only deliver up to 9:30pm``` and press the Enter key.
 21. Click Close.
 
+---
+
 Here is what the PizzaBag composite bag should look like in the designer:
 ![](images/12-pizza-bag-entity.png)
+
+Now we need to associate the PizzaBag composite entity to the OrderPizza intent so that we can extract the key words and phrases from the user input.
+
+22. Select ![](images/4-left_nav_intents.png).
+23. Select the **OrderPizza** intent.
+24. Click ![](images/8-add-entity.png) button and select **PizzaBag** from the dropdown. See this screenshot to help locate the button:
+![](images/13-associate-entity.png)
