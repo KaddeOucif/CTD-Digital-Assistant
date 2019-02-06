@@ -12,7 +12,7 @@ To complete this lab you need to;
 - Download these files
   - [PizzaSkill_starter.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_starter.zip?raw=true)
   - [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true)
-  - [ODA_HOL2019](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_CTD2019.zip?raw=true)
+  - [ODA_CTD2019.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_CTD2019.zip?raw=true)
   - <details><summary> <b>Optional: Download NodeJS & the Web Client SDK to host your Digital Assistant in your machine</b> </summary>
      <b>1.</b> <a href="https://nodejs.org/en/download/">Download NodeJS here</a> <br>
      <b>2.</b> <a href="http://bit.ly/amcedownloads">Download the Web Client SDK here</a> <br>
@@ -316,3 +316,12 @@ Using the composite entity, we are able to resolve all the entities in a single 
 ![](images/20-published-read-only.png)
 
 Congrats! Your skill is now ready to be added to a digital assistant!
+
+### 3. Design your Pizza Skill ###
+
+<insert brief description of what we're going to do>
+
+1. Click ![](images/1-hamburger-menu.png) to open the side menu.
+2. Click **Development** and select **Digital Assistants**.
+3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
+4. On the Digital Assistants dashboard, find the tile for your copy of [ODA_CTD2019.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_CTD2019.zip?raw=true) and select it to open it up in the designer.
