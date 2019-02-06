@@ -244,6 +244,7 @@ Once all the entities are resolved, we output the pizza details in the showPizza
 - The maxError state is called if the number of attempts for an entity in the bag has reached the value of maxPrompts.
 
 2. Working with your skills, the validate-button is going to be your best friend. You can find it top-right in your skill-window. If you get a green banner, then that's a good sign. A red banner is bad news, but do not worry - the platform always tells you exactly where you went wrong. If you've copied the YAML code in to the dialog flow window then the process would be very similar to the one beneath.
+
 ![](images/21-validate-gif.gif)
 
 3. Make sure you press the ![](images/6-train-button.png) and wait for a couple of a seconds.
