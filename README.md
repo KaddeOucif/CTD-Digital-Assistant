@@ -21,12 +21,17 @@ To complete this lab you need to;
      </details>
  
 ## Get on crackin'! ##
+
+***
+
 ### Login to the shared instance ###
 1. In your browser, navigate to http://bit.ly/DAOOW2019.
 2. Log in to the instance using the credentials provided by your lab instructor.
 
 After successfully logging in, you will find yourself on the ODA home page.
- 
+
+***
+
 ### 1. Clone Copies of the Starter Skill and Digital Assistant ###
 In this lab, a starter skill and a starter digital assistant are provided for you. Before you get to work, you need to create your own copies.
 
@@ -51,6 +56,8 @@ For example, if your initials are AB, you'd name the skill **AB_CTD_2019**.
 
 6. Click **Clone**.
 7. On the Digital Assistants dashboard page, select _<your_initials>_ODA_HOL2019_ to open it up in the designer.
+
+***
 
 ### 2. Design your Pizza Skill ###
 < Describe what we're doing this lab>
@@ -316,6 +323,8 @@ Using the composite entity, we are able to resolve all the entities in a single 
 ![](images/20-published-read-only.png)
 
 Congrats! Your skill is now ready to be added to a digital assistant!
+
+***
 
 ### 3. Design your Pizza Skill ###
 
