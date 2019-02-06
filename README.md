@@ -238,15 +238,81 @@ states:
       return: "helpState"
 ```
 
-- The resolveEntities state calls a system component (System.ResolveEntities), iterates through all the entity fields in the composite bag, converses with the user, and resolves all the fields.
-- The setPizzaDough state checks if the dough value is null. If yes, then it sets it to regular.
+- The **resolveEntities** state calls a system component (System.ResolveEntities), iterates through all the entity fields in the composite bag, converses with the user, and resolves all the fields.
+- The **setPizzaDough** state checks if the dough value is null. If yes, then it sets it to regular.
 Once all the entities are resolved, we output the pizza details in the showPizzaOrder state.
-- The maxError state is called if the number of attempts for an entity in the bag has reached the value of maxPrompts.
+- The **maxError** state is called if the number of attempts for an entity in the bag has reached the value of maxPrompts.
 
-2. Working with your skills, the validate-button is going to be your best friend. You can find it top-right in your skill-window. If you get a green banner, then that's a good sign. A red banner is bad news, but do not worry - the platform always tells you exactly where you went wrong. If you've copied the YAML code in to the dialog flow window then the process would be very similar to the one beneath.
+2. Working with your skills, the validate-button is going to be your best friend. You can find it top-right in your skill-window. If you get a green banner, then that's a good sign. A red banner is bad news, but do not worry - the platform always tells you exactly where you went wrong. If you've copied the YAML code in to the dialog flow window and followed all of the steps up until now, then the process would be very similar to the one beneath.
 
 ![](images/21-validate-gif.gif)
 
-3. Make sure you press the ![](images/6-train-button.png) and wait for a couple of a seconds.
+3. Make sure you press the ![](images/6-train-button.png) button next to the Validate button and wait for a couple of a seconds.
 
 #### Test and Publish your Skill ####
+1. Find the Skill Tester icon ![](images/7-test-button.png) in the bottom of the skill's left navigation bar and click it.
+2. Type ```I want to order a medium pizza``` in the **Message** field and click **Send**.
+Click the **Intent/QnA** tab and observe the Entity Matches section.
+You'll notice that the _PizzaSize_ value is set to _Medium_:
+
+![](images/14-test-pizza-skill.png)
+
+_On the left side, there is a conversation between the user and the skill. On the right side, the Intent/Q&A tab is selected, there is a graph showing the OrderPizza intent having a match of 100%, and there are entity matches shown for PizzaSize and PizzaBag. For PizzaBag, it shows Value:Medium._
+
+3. Click the **Reset** button.
+5. Now try ```Can I place an order for a medium meaty pizza to be delivered at 9:00 PM``` and observe the response:
+
+![](images/15-test-pizza-skill2.png)
+
+_On the left side, there is a conversation between the user and the skill. The response to the user is 'ok let's get that order sorted' and 'Ok, so we're getting you a Medium Meaty at 21:00. This will be on our regular base.' On the right side, the Conversation tab is selected, and there is a flow chart showing the sequence of states called: startOrderPizza, resolvedEntities, setPizzaDough, and showPizzaOrder._
+
+6. Click **Reset**.
+7. Now let’s try one with a gluten-free base by typing: ```A small veggie pizza to be delivered at 8:00pm, also can you please make it gluten-free?```
+
+![](images/16-test-pizza-skill3.png)
+
+_On the left side, there is a conversation between the user and the skill. The response to the user is 'ok let's get that order sorted' and 'Ok, so we're getting you a Small Veggie at 20:00. This will be on our gluten free base.'_
+
+8. Click **Reset**.
+9. Now try Can I place an order for a medium meaty pizza to be delivered at 10:00 PM.
+This should result in the following response:
+
+![](images/17-test-pizza-skill4.png)
+
+_On the left side, there is a conversation between the user and the skill. The response to the user is 'ok let's get that order sorted' and 'Sorry, we only deliver up to 9:30 PM.' On the right side, the Conversation tab is selected, and there is a flow chart showing the sequence of states called: startOrderPizza and resolvedEntities._
+
+10. Click **Reset**.
+11. Now try ```Can I place an order for a small medium meaty pizza to be delivered at 9:00 PM``` and see what you get.
+12. Click **Reset**.
+13. Now try ```Can I place an order for a small sausage pizza to be delivered at 9:00 PM``` and see what you get.
+14. Click **Reset**.
+15. Next try ```I want a small meaty pizza.```
+The skill asks at what time to deliver the pizza.
+
+16. To see how the skill reacts when the user changes his mind mid-stream, type ```actually make it large``` and press Enter.
+When the skill repeats the question about delivery time, type ```9:00 PM```.
+17. This is what the conversation should look like:
+
+![](images/18-test-pizza-skill5.png)
+
+_On the left side, there is a conversation between the user and the skill. After the user has entered '9:00pm', the response from the skill is 'OK so we are getting you a Large Meaty at 21:00. This will be on our regular base.'
+As you can see, the skill was able to incorporate the change in the order and continue without missing a beat._
+
+Using the composite entity, we are able to resolve all the entities in a single customer query!
+
+18. Now that we are done building the skill, we'd like to add it to our digital assistant. However, to make the skill available to be added to a digital assistant, we first need to publish it:
+
+19. Click ![](images/1-hamburger-menu.png) to open the side menu.
+20. Click **Development** and select **Skills**.
+21. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
+22. In the skills dashboard, find the tile for your copy of **PizzaSkill**.
+23. Click the skill's Options menu ![](images/2-options-menu.png) and select **Publish**.
+
+![](images/19-publish-skill.png)
+
+24. On the Publish Skills page, click **Publish**.
+25. Once you have published the skill, note the icon on the skill's tile that shows it is now read-only.
+
+![](images/20-published-read-only.png)
+
+Congrats! Your skill is now ready to be added to a digital assistant!
