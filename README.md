@@ -22,8 +22,6 @@ To complete this lab you need to;
  
 ## Get on crackin'! ##
 
-***
-
 ### Login to the shared instance ###
 1. In your browser, navigate to http://bit.ly/DAOOW2019.
 2. Log in to the instance using the credentials provided by your lab instructor.
@@ -157,6 +155,8 @@ Now we need to define what actions the skills should take depending on the user-
 
 1. Paste the YAML-code downloaded previously in [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true). We won't focus too much on what each segment in the code does in this lab, but let's go through it briefly. You can also find some additional commentary about the flow in the YAML file.
 
+<details><summary> <b> <- Press this arrow to get the code from a drop-down menu </b></summary>
+  
 ```yaml
 #metadata: information about the flow
 #  platformVersion: the version of the bots platform that this flow was written to work with 
@@ -244,6 +244,7 @@ states:
     transitions:
       return: "helpState"
 ```
+</details>
 
 - The **resolveEntities** state calls a system component (System.ResolveEntities), iterates through all the entity fields in the composite bag, converses with the user, and resolves all the fields.
 - The **setPizzaDough** state checks if the dough value is null. If yes, then it sets it to regular.
