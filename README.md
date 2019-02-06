@@ -148,7 +148,7 @@ Now we need to associate the PizzaBag composite entity to the OrderPizza intent 
 
 Now we need to define what actions the skills should take depending on the user-input. This is where we choreograph the interaction between the Skill and its end-users. 
 
-Paste the YAML-code downloaded previously in [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true). We won't focus too much on what each segment in the code does in this lab, but let's go through it briefly. You can also find some additional commentary about the flow in the YAML file.
+1. Paste the YAML-code downloaded previously in [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true). We won't focus too much on what each segment in the code does in this lab, but let's go through it briefly. You can also find some additional commentary about the flow in the YAML file.
 
 ```yaml
 #metadata: information about the flow
@@ -243,4 +243,9 @@ states:
 Once all the entities are resolved, we output the pizza details in the showPizzaOrder state.
 - The maxError state is called if the number of attempts for an entity in the bag has reached the value of maxPrompts.
 
-#### Validate, train and test your Pizza-Skill! ####
+2. Working with your skills, the validate-button is going to be your best friend. You can find it top-right in your skill-window. If you get a green banner, then that's a good sign. A red banner is bad news, but do not worry - the platform always tells you exactly where you went wrong. If you've copied the YAML code in to the dialog flow window then the process would be very similar to the one beneath.
+![](images/21-validate-gif.gif)
+
+3. Make sure you press the ![](images/6-train-button.png) and wait for a couple of a seconds.
+
+#### Test and Publish your Skill ####
