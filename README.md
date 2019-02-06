@@ -155,7 +155,7 @@ Now we need to define what actions the skills should take depending on the user-
 
 1. Paste the YAML-code downloaded previously in [PizzaSkill_BotML.json](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/PizzaSkill_BotML.json?raw=true). We won't focus too much on what each segment in the code does in this lab, but let's go through it briefly. You can also find some additional commentary about the flow in the YAML file.
 
-<details><summary> <b> <- Press this arrow to get the code from a drop-down menu </b></summary>
+<details><summary> <b> Press here if you want to see the code </b></summary>
   
 ```yaml
 #metadata: information about the flow
@@ -244,7 +244,7 @@ states:
     transitions:
       return: "helpState"
 ```
-</details>
+</details> <br>
 
 - The **resolveEntities** state calls a system component (System.ResolveEntities), iterates through all the entity fields in the composite bag, converses with the user, and resolves all the fields.
 - The **setPizzaDough** state checks if the dough value is null. If yes, then it sets it to regular.
