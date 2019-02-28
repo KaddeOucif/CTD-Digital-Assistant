@@ -327,11 +327,189 @@ Congrats! Your skill is now ready to be added to a digital assistant!
 
 ***
 
-### 3. Design your Pizza Skill ###
+### 3. Set up Digital Assistant ###
 
-<insert brief description of what we're going to do>
+Digital assistants are virtual personal assistants that users can interact with using natural language. When a user engages with the digital assistant, the digital assistant evaluates the user input and routes the conversation to the appropriate skill.
 
-1. Click ![](images/1-hamburger-menu.png) to open the side menu.
-2. Click **Development** and select **Digital Assistants**.
-3. Click ![](images/1-hamburger-menu.png) again to collapse the side menu.
-4. On the Digital Assistants dashboard, find the tile for your copy of [ODA_CTD2019.zip](https://github.com/KaddeOucif/CTD-Digital-Assistant/blob/master/files/ODA_CTD2019.zip?raw=true) and select it to open it up in the designer.
+Among other things, the digital assistant:
+
+- Greets the user upon access.
+- Upon user request, lists what it can do and provides entry points into the given skills.
+- Routes explicit user requests to the appropriate skill.
+- Handles interruptions to flows.
+- Handles disambiguation.
+- Handles requests to exit the bot.
+
+#### Explore the Digital Assistant ####
+The starter digital assistant (or, DA for short) that you just cloned consists of two skills – FinancialBot and RetailBot. Later, we'll add PizzaSkill to the DA.
+
+To familiarize yourself with the DA, try it out by following these steps:
+
+1. Click main menu icon to open the side menu.
+2. Click Development and select Digital Assistants.
+3. Click main menu icon again to collapse the side menu.
+4. On the Digital Assistants dashboard, find the tile for your copy of ODA_HOL2019 and select it to open it up in the designer.
+5. Ensure the Skills icon is selected (the Skills icon).
+Notice that FinancialBot and RetailBot are listed there.
+
+6. Select the RetailBot skill and browse the attributes of its description and interaction model.
+7. Select the FinancialBot skill and browse the attributes of its description and interaction model.
+8. Select the Intents icon.
+9. Note the three intents.
+These are built in to all digital assistants. Here's what they are for:
+
+- **exit:** applies when the user signals the desire to exit the current conversation or context in the digital assistant.
+- **help:** applies when the user asks for help or orientation.
+- **unresolvedIntent:** applies to user input that doesn't match well with the exit and help intents.
+10. Click the Settings icon and select the Configurations tab.
+Notice the Routing Parameters, Conversation Parameters and Other Parameters sections.
+
+11. Click Train bot icon, click Submit, and then wait a few seconds for the training to complete.
+12. Find the tester icon (the Digital Assistant Tester icon) in the bottom of the DA's left navigation bar and click it.
+13. In the tester's Message field, type help me, press Enter, and note the DA's greeting and initial menu.
+14. Click the Reset button.
+15. Now try entering Do I have enough money in my savings account, pressing Enter, and observing the response.
+16. Close the tester.
+
+#### Add PizzaSkill to the DA ####
+
+With a new pizzeria opening in the shopping centre, we want the digital assistant to support this merchant as well. So let's add the PizzaSkill to our digital assistant and then train the digital assistant so that it can work with the new skill:
+
+1. In your DA, select the Skills icon.
+2. Click Add Skill button.
+3. Find the tile for your copy of PizzaSkill.
+Note: The skill won't appear there if you haven't completed the Publish the Skill part of the lab.
+
+4. In the tile for your skill, click Add Skill icon.
+5. Click Close to close the Skill Catalog.
+6. Click Train bot icon, click Submit, and then wait a few seconds for the training to complete.
+
+### 4. Evaluate routing behaviors ###
+Before putting the digital assistant into production, let’s use the tester to evaluate various aspects of its routing behavior.
+
+Open the tester by clicking the tester icon (the Digital Assistant Tester icon).
+
+#### No Match ####
+In the tester's Message field, type I want a burger and press Enter.
+Since no match is found in the DA and skill, it generates the DA-level help card:
+
+Screenshot showing the digital assistant tester. After the user input ('I want a burger') is the DA's response (The text 'No matches were found. Here are some things you can do.' followed by a card for Pizza King with the 'Order Pizza' option.)
+Note: Only the Pizza King shows in the screenshot, but you can use the horizontal scroll arrows to see the cards for the other skills.
+
+Click Reset.
+#### Implicit Invocation ####
+In the tester's Message field, type Send money and press Enter.
+Notice that the routing resolves to the Digital Bank candidate skill and its Send Money intent:
+
+Screenshot showing the digital assistant tester. After the user input ('Send money') is the DA's response (The text 'From which account do you want to make a payment' followed by options for savings, checking, and credit card.)
+Note: "Digital Bank" is the invocation name of FinancialBot.
+
+Click the Routing tab and scroll down.
+Notice the intent evaluation that leads to this response:
+
+Screenshot showing the Intent Calls section of the Routing tab of the DA tester. In the Candidate Skills row , the Digital Bank skill is circled. In the Candidate Flows row, the Send Money intent is circled.
+Click Reset.
+Note: In these examples, you might get slightly different results than what are shown here, especially in the confidences scores (given in percentages) when resolving intents. And in some cases, the resolved intents could vary, should the differing confidence scores push those intents above or below the given confidence thresholds. The cause of this variance is the non-deterministic nature of the AI behind the natural language processing and the fact that these bots have a limited number of training utterances (in order to make the lab simpler).
+
+#### Explicit Invocation ####
+In the tester's Message field, type I want to send money from Digital Bank and press Enter.
+Here’s the user’s input and the digital assistant’s initial response:
+
+Screenshot showing the digital assistant tester. After the user input ('I want to send money from Digital Bank') is the DA's response (The text 'From which account do you want to make a payment' followed by options for savings, checking, and credit card.)
+Click the Routing tab and scroll down to the Rules section and notice the rule that is displayed.
+Screenshot showing the Rules section of the Routing tab of the DA tester. The rule displayed reads 'Explicit invocation takes precedence over other flows in digital assistant context.'
+In the Intent Calls section, you can see that the Digital Bank skill gets a much higher confidence score than the other skills.
+
+Screenshot showing the Intent Calls section of the Routing tab of the DA tester. In the Candidate Skills row , the Digital Bank skill is circled. In the Candidate Flows row, the Send Money intent is circled.
+Click Reset.
+
+#### Ambiguous Utterance ####
+In the tester's Message field, type What is my balance? and press Enter.
+Here’s the conversation:
+
+Screenshot showing the digital assistant tester. After the user input ('What is my balance?') is the DA's response (The text 'Do you want to go to:' followed by options for GiftCardBalance in Sport Store, Balances in Digital Bank, and None of the above.)
+As you can see, the digital assistant is unsure of what the user wants to do, so it provides a prompt asking the user to choose among the Sport Store (which is the invocation name for the RetailBot skill) and Digital Bank skill intents.
+
+Click the Routing tab and scroll down.
+Notice the evaluation in the Intent Calls section that leads to this response:
+
+Screenshot showing the Intent Calls section of the Routing tab of the DA tester. The significant details are described in the ensuing text.
+Both the candidate skills got high scores (100%). And then for each of those skills, the router identified a candidate flow that also scored highly (also 100%).
+
+Since the GiftCardBalance and Balances candidate flows exceed the confidence threshold, and since difference between their scores is less than the Confidence Win Margin value (10%), the digital assistant asks the user to choose between those intents.
+
+Click Reset.
+#### Context Awareness ####
+In the tester, type What is my balance? and press Enter.
+Here’s the conversation:
+
+Screenshot showing the digital assistant tester. After the user input ('What is my balance?') is the DA's response (The text 'Do you want to go to:' followed by options for GiftCardBalance in Sport Store, Balances in Digital Bank, and None of the above.)
+Select Balances in Digital Bank.
+Screenshot showing the digital assistant tester. After the user input ('Balances in Digital Bank') is the DA's response (The text 'For which account do you want your balance' followed by options for savings, checking, and credit card.)
+Select checking.
+Screenshot showing the digital assistant tester. After the user input ('checking') is the DA's response ('The balance in your checking account (903423-123) is $2334.56')
+.
+Again, type How much do I have in my savings?
+Here is the response:
+
+Screenshot showing the digital assistant tester. After the user input ('How much do I have in my savings') is the DA's response ('The balance in your savings account (258293-832) is $2610.56')
+.
+Click Reset.
+###### Notes on What We Just Did ######
+As you can see, the user starts with the question "What is my balance?", goes through a prompt to disambiguate between the Digital Bank skill and the Sport Store skill, and eventually gets her checking account balance. Then the user enters "What is my balance?" again, but this time doesn't have to navigate through any disambiguation prompts. The info in the Routing tab helps to explain why.
+
+Also note that in the Rules section of the Routing tab, you see the following:
+
+Screenshot of the Rules section of the Routing tab. It shows the detail 'Current context matches with very high confidence. Other skill flows are ignored.'
+So, even though there are matching intents from the Sport Store skill, they are ignored. The Intent Calls section shows all of the matching intents, but the entry for “Current Context”, which contains only the Digital Bank skill’s Balances intent, is decisive.
+
+Screenshot showing the Intent Calls section of the Routing tab of the DA tester. For Candidate Skills, Digital Bank and Sports Store match. For Current Context, Digital Bank's Balances intent matches. For Candidate Flows, Digital Bank's Balances intent matches.
+#### Non sequitur ####
+Non sequitur refers to interrupting a conversation flow by changing the subject. Here's an example where such interruptions occur because the user needs info from one skill to complete the flow in another skill.
+
+In the tester, type I want to order a small meaty pizza and press Enter.
+Pizza Skill is invoked and here is the response:
+
+Screenshot showing the digital assistant tester. After the user input ('I want to order a small meaty pizza') is the DA's response ('ok lets get that order sorted' followed by 'When can we deliver that for you?')
+To simulate the user suddenly being unsure if he has enough money, type the following: oh, do I have enough money on my credit card?
+At this point the DA detects that the intent corresponds to the Digital Bank skill and asks if user wants to switch to Balances in Digital Bank:
+
+Screenshot showing the digital assistant tester. After the user input ('oh, do I have enough money on my credit card?') is the DA's response ('Do you want to switch to Balances in Digital Bank now' followed by Yes and No options.
+Select Yes.
+ Screenshot showing the digital assistant tester. After the user input ('Yes') is the DA's response ('The balance in your credit card account (4352-3423-1234-5239) is $-208.88' followed by 'Your remaining credit is $4791.12' followed by 'Do you want to resume OrderPizza in Pizza King now?' followed by Yes and No options.
+The user is presented with his financial details, thus completing that flow. At that point, the DA asks if it can return back to PizzaSkill.
+
+Again, select Yes.
+Screenshot showing the digital assistant tester. After the user input ('Yes') is the DA's response ('When can we deliver that for you')
+The DA returns to PizzaSkill and resumes the conversation where you left it:
+
+Type 9:00 PM and press Enter.
+Screenshot showing the digital assistant tester. After the user input ('9:00 PM') is the DA's response ('Ok so we are getting you a Small Meaty at 21:00. This will be on our regular base')
+In this sequence, you started ordering a pizza, confirmed you had enough money in your account, and finished ordering the pizza.
+
+#### Non sequitur – Complex Conversation ####
+Let’s try a more complex conversation:
+
+In the tester, type I want to order a large pizza at 9:00 PM today and press Enter.
+Instead of selecting the kind of pizza, type oh, do I have enough money?
+At this point, the DA will ask you to switch to Balance in Digital Bank.
+
+Select Yes.
+Now, instead of selecting the account type, type how about my gift card balance?
+The DA asks if you want to switch to GiftCardBalance in Sport Store.
+
+Select Yes.
+Type GC100 as the gift card number and press Enter.
+The DA informs you of your gift card balance.
+
+Then the DA asks if you want to return to Balance in Digital Bank.
+
+Select Yes.
+Select savings as your account type.
+The DA fetches the savings account details for you and asks if you want to return to OrderPizza in Pizza King.
+
+Select Yes.
+Select any of the options for the kind of pizza you want to order.
+Observe the states flow in the Conversation tab.
+Screenshot showing the Conversation tab of the digital assistant tester. Through a flow chart it depicts the states invoked in the DA in the following order: startOrderPizza, resolveEntities, startBalances (switch to Financial Bot), askBalancesAccountType, startGiftCardBalance (switch to RetailBot), setPizzaDough (switch to PizzaSkill), and showPizzaOrder.
+You are now done with creating, personalizing, and evaluating the routing behavior of your digital assistant! In the next section, we'll add it to a web channel through which users can access it.
